@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html>
-
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Tanga 3rd Party Developer Documentation (API) : 3rd Party Developer Documentaion">
+    <meta name="description" content="Tanga Developer Portal : APIs">
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-    <title>Tanga 3rd Party Developer Documentation (API)</title>
+    <title>Tanga Developer Portal</title>
   </head>
 
   <body>
@@ -16,50 +15,48 @@
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
         <header class="inner">
-          <a id="forkme_banner" href="https://github.com/Tanga">View on GitHub</a>
-
-          <h1 id="project_title">Tanga 3rd Party Developer Documentation (API)</h1>
-          <h2 id="project_tagline">3rd Party Developer Documentaion</h2>
-
+          <h1 id="project_title">Tanga Developer Portal</h1>
+          <h2 id="project_tagline">Integration Points &amp; APIs</h2>
         </header>
     </div>
 
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <h1>
-<a id="basic-tanga-apis" class="anchor" href="#basic-tanga-apis" aria-hidden="true"><span class="octicon octicon-link"></span></a>Basic Tanga APIs</h1>
 
 <h2>
-<a id="authentication" class="anchor" href="#authentication" aria-hidden="true"><span class="octicon octicon-link"></span></a>Authentication</h2>
+  <a id="authentication" class="anchor" href="#authentication" aria-hidden="true"><span class="octicon octicon-link"></span></a>Authentication
+</h2>
 
-<p>We use http authentiction.  Use the same credentials you use to login into the vendor portal <a href="https://vendors.tanga.com">https://vendors.tanga.com</a>.</p>
-
-<h2>
-<a id="vendor-id-" class="anchor" href="#vendor-id-" aria-hidden="true"><span class="octicon octicon-link"></span></a>Vendor ID </h2>
-
-<p>Anywhere you see  it is the vendor id which is the id in the URL when you are viewing your pages on the vendor portal <a href="https://vendors.tanga.com">https://vendors.tanga.com</a>.</p>
+  <p>We use http authentiction.  Use the same credentials you use to login into the vendor portal <a href="https://vendors.tanga.com">https://vendors.tanga.com</a>.</p>
 
 <h2>
-<a id="product-listings" class="anchor" href="#product-listings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Product Listings</h2>
+  <a id="vendor-id-" class="anchor" href="#vendor-id-" aria-hidden="true"><span class="octicon octicon-link"></span></a>Vendor ID 
+</h2>
 
-<p><em>[API]</em>
-Not currently supported</p>
-
-<p><em>[Manual CSV]</em>
-We support CSV imports to load products to be listed on Tanga.  You can find the current CSV format HERE.  Email the completed file to <a href="mailto:sourcing@tanga.com">sourcing@tanga.com</a> for review/import.  </p>
-
-<p>We also support the Etsy Export file format LINK HERE.</p>
-
-<p><em>[Future]</em>
-We are working on Google Product Feed and Amazon Product feed imports.</p>
+  <p>Anywhere you see  it is the vendor id which is the id in the URL when you are viewing your pages on the vendor portal <a href="https://vendors.tanga.com">https://vendors.tanga.com</a>.</p>
 
 <h2>
-<a id="inventory" class="anchor" href="#inventory" aria-hidden="true"><span class="octicon octicon-link"></span></a>Inventory</h2>
+  <a id="product-listings" class="anchor" href="#product-listings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Product Listings</h2>
 
-<p><em>[API]</em>
-inventory report in json format:
-curl --user email:password <a href="https://vendors.tanga.com/api/vendors/">https://vendors.tanga.com/api/vendors/</a>/inventory_report</p>
+  <p><em>[API]</em></p>
+  <p>Not currently supported</p>
+
+  <p><em>[Manual CSV]</em></p>
+  <p>We support CSV imports to load products to be listed on Tanga.  You can find the current CSV format HERE.  Email the completed file to <a href="mailto:sourcing@tanga.com">sourcing@tanga.com</a> for review/import.</p>
+
+  <p>We also support the Etsy Export file format LINK HERE.</p>
+
+  <p><em>[Future]</em></p>
+  <p>We are working on Google Product Feed and Amazon Product feed imports.</p>
+
+<h2>
+  <a id="inventory" class="anchor" href="#inventory" aria-hidden="true"><span class="octicon octicon-link"></span></a>Inventory
+</h2>
+
+  <p><em>[API]</em></p>
+  <p>inventory report in json format:</p>
+  <p><code>curl --user email:password <a href="https://vendors.tanga.com/api/vendors/">https://vendors.tanga.com/api/vendors/</a>/inventory_report</code></p>
 
 <p>Currently we do not support inventory updating in the API.</p>
 
@@ -104,8 +101,5 @@ You can manually download orders via CSV format in your vendor portal:
         <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
-
-    
-
   </body>
 </html>
