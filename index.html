@@ -1,1 +1,62 @@
-Hello World
+# Basic Tanga APIs
+
+## Authentication
+We use http authentiction.  Use the same credentials you use to login into the vendor portal https://vendors.tanga.com.
+
+## Vendor ID <id>
+Anywhere you see <id> it is the vendor id which is the id in the URL when you are viewing your pages on the vendor portal https://vendors.tanga.com.
+
+
+## Product Listings
+*[API]*
+Not currently supported
+
+*[Manual CSV]*
+We support CSV imports to load products to be listed on Tanga.  You can find the current CSV format HERE.  Email the completed file to sourcing@tanga.com for review/import.  
+
+We also support the Etsy Export file format LINK HERE.
+
+*[Future]*
+We are working on Google Product Feed and Amazon Product feed imports.
+
+## Inventory
+
+*[API]*
+inventory report in json format:
+curl --user email:password https://vendors.tanga.com/api/vendors/<id>/inventory_report
+
+Currently we do not support inventory updating in the API.
+
+*[Future]*
+We will support REST based inventory updates.
+
+
+## Upload Tracking
+
+*[API]*
+upload single tracking number:
+`curl -X POST -d package_id=12234 -d tracking_number=1Zasdf --user email:password https://vendors.tanga.com/api/vendors/<id>/set_tracking`
+
+upload multiple tracking numbers via csv file:
+`curl -X POST --user email:password -d "csv=`cat /tmp/t.csv`" https://vendors.tanga.com/api/vendors/<id>/set_tracking`
+The CSV file should be in the same format as the one you upload to https://vendors.tanga.com.
+
+
+*[Manual CSV]*
+You can manually upload tracking via CSV format LINK HERE in your vendor portal: 
+`https://vendors.tanga.com/drop_shippers/<id>/purchase_orders/orders/csv`
+
+
+## Orders
+*[API]*
+fetch unshipped orders in csv format:
+curl --user email:password https://vendors.tanga.com/api/vendors/<id>/unshipped_items.csv
+This will return the data in csv format you define.
+
+fetch unshipped orders in json format:
+curl --user email:password  https://vendors.tanga.com/api/vendors/<id>/unshipped_items
+
+
+*[Manual CSV]*
+You can manually download orders via CSV format in your vendor portal: 
+`https://vendors.tanga.com/drop_shippers/<id>/purchase_orders`
