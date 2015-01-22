@@ -54,51 +54,54 @@
   <a id="inventory" class="anchor" href="#inventory" aria-hidden="true"><span class="octicon octicon-link"></span></a>Inventory
 </h2>
 
-  <p><em>[API]</em></p>
-  <p>inventory report in json format:</p>
-  <p><code>curl --user email:password <a href="https://vendors.tanga.com/api/vendors/">https://vendors.tanga.com/api/vendors/</a>/inventory_report</code></p>
+  <p><em>[API]</em><br/>
+  inventory report in json format:<br/>
+  <code>curl --user email:password <a href="https://vendors.tanga.com/api/vendors/">https://vendors.tanga.com/api/vendors/</a>/inventory_report</code></p>
 
-<p>Currently we do not support inventory updating in the API.</p>
+  <p>Currently we do not support inventory updating in the API.</p>
 
-<p><em>[Future]</em>
-We will support REST based inventory updates.</p>
-
-<h2>
-<a id="upload-tracking" class="anchor" href="#upload-tracking" aria-hidden="true"><span class="octicon octicon-link"></span></a>Upload Tracking</h2>
-
-<p><em>[API]</em>
-upload single tracking number:
-<code>curl -X POST -d package_id=12234 -d tracking_number=1Zasdf --user email:password https://vendors.tanga.com/api/vendors/&lt;id&gt;/set_tracking</code></p>
-
-<p>upload multiple tracking numbers via csv file:
-<code>curl -X POST --user email:password -d "csv=</code>cat /tmp/t.csv<code>" https://vendors.tanga.com/api/vendors/&lt;id&gt;/set_tracking</code>
-The CSV file should be in the same format as the one you upload to <a href="https://vendors.tanga.com">https://vendors.tanga.com</a>.</p>
-
-<p><em>[Manual CSV]</em>
-You can manually upload tracking via CSV format LINK HERE in your vendor portal: 
-<code>https://vendors.tanga.com/drop_shippers/&lt;id&gt;/purchase_orders/orders/csv</code></p>
+  <p><em>[Future]<br/>
+  We will support REST based inventory updates.</p>
 
 <h2>
-<a id="orders" class="anchor" href="#orders" aria-hidden="true"><span class="octicon octicon-link"></span></a>Orders</h2>
+  <a id="upload-tracking" class="anchor" href="#upload-tracking" aria-hidden="true"><span class="octicon octicon-link"></span></a>Upload Tracking
+</h2>
 
-<p><em>[API]</em>
-fetch unshipped orders in csv format:
-curl --user email:password <a href="https://vendors.tanga.com/api/vendors/">https://vendors.tanga.com/api/vendors/</a>/unshipped_items.csv
+  <p><em>[API]</em><br/>
+  upload single tracking number:<br/>
+  <code>curl -X POST -d package_id=12234 -d tracking_number=1Zasdf --user email:password https://vendors.tanga.com/api/vendors/&lt;id&gt;/set_tracking</code></p>
+
+  <p>upload multiple tracking numbers via csv file:<br/>
+  <code>curl -X POST --user email:password -d "csv=</code>cat /tmp/t.csv<code>" https://vendors.tanga.com/api/vendors/&lt;id&gt;/set_tracking</code></p>
+  <p>The CSV file should be in the same format as the one you upload to <a href="https://vendors.tanga.com">https://vendors.tanga.com</a>.</p>
+
+  <p><em>[Manual CSV]</em><br/>
+  You can manually upload tracking via CSV format LINK HERE in your vendor portal: <br/>
+  <code>https://vendors.tanga.com/drop_shippers/&lt;id&gt;/purchase_orders/orders/csv</code></p>
+
+<h2>
+  <a id="orders" class="anchor" href="#orders" aria-hidden="true"><span class="octicon octicon-link"></span></a>Orders
+  </h2>
+
+  <p><em>[API]</em><br/>
+  fetch unshipped orders in csv format:<br/>
+  <code>curl --user email:password https://vendors.tanga.com/api/vendors/unshipped_items.csv</code><br/>
 This will return the data in csv format you define.</p>
 
-<p>fetch unshipped orders in json format:
-curl --user email:password  <a href="https://vendors.tanga.com/api/vendors/">https://vendors.tanga.com/api/vendors/</a>/unshipped_items</p>
+  <p>fetch unshipped orders in json format:<br/>
+  <code>curl --user email:password  https://vendors.tanga.com/api/vendors/unshipped_items</code></p>
 
-<p><em>[Manual CSV]</em>
-You can manually download orders via CSV format in your vendor portal: 
-<code>https://vendors.tanga.com/drop_shippers/&lt;id&gt;/purchase_orders</code></p>
+  <p><em>[Manual CSV]</em><br/>
+  You can manually download orders via CSV format in your vendor portal: <br/>
+  <code>https://vendors.tanga.com/drop_shippers/&lt;id&gt;/purchase_orders</code></p>
+
       </section>
     </div>
 
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
       <footer class="inner">
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+        <p>&copyright; TangaCom, LLC 2015</a></p>
       </footer>
     </div>
   </body>
