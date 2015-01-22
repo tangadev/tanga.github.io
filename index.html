@@ -1,62 +1,111 @@
-# Basic Tanga APIs
+<!DOCTYPE html>
+<html>
 
-## Authentication
-We use http authentiction.  Use the same credentials you use to login into the vendor portal https://vendors.tanga.com.
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Tanga 3rd Party Developer Documentation (API) : 3rd Party Developer Documentaion">
 
-## Vendor ID <id>
-Anywhere you see <id> it is the vendor id which is the id in the URL when you are viewing your pages on the vendor portal https://vendors.tanga.com.
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
+    <title>Tanga 3rd Party Developer Documentation (API)</title>
+  </head>
 
-## Product Listings
-*[API]*
-Not currently supported
+  <body>
 
-*[Manual CSV]*
-We support CSV imports to load products to be listed on Tanga.  You can find the current CSV format HERE.  Email the completed file to sourcing@tanga.com for review/import.  
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/Tanga">View on GitHub</a>
 
-We also support the Etsy Export file format LINK HERE.
+          <h1 id="project_title">Tanga 3rd Party Developer Documentation (API)</h1>
+          <h2 id="project_tagline">3rd Party Developer Documentaion</h2>
 
-*[Future]*
-We are working on Google Product Feed and Amazon Product feed imports.
+        </header>
+    </div>
 
-## Inventory
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="basic-tanga-apis" class="anchor" href="#basic-tanga-apis" aria-hidden="true"><span class="octicon octicon-link"></span></a>Basic Tanga APIs</h1>
 
-*[API]*
+<h2>
+<a id="authentication" class="anchor" href="#authentication" aria-hidden="true"><span class="octicon octicon-link"></span></a>Authentication</h2>
+
+<p>We use http authentiction.  Use the same credentials you use to login into the vendor portal <a href="https://vendors.tanga.com">https://vendors.tanga.com</a>.</p>
+
+<h2>
+<a id="vendor-id-" class="anchor" href="#vendor-id-" aria-hidden="true"><span class="octicon octicon-link"></span></a>Vendor ID </h2>
+
+<p>Anywhere you see  it is the vendor id which is the id in the URL when you are viewing your pages on the vendor portal <a href="https://vendors.tanga.com">https://vendors.tanga.com</a>.</p>
+
+<h2>
+<a id="product-listings" class="anchor" href="#product-listings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Product Listings</h2>
+
+<p><em>[API]</em>
+Not currently supported</p>
+
+<p><em>[Manual CSV]</em>
+We support CSV imports to load products to be listed on Tanga.  You can find the current CSV format HERE.  Email the completed file to <a href="mailto:sourcing@tanga.com">sourcing@tanga.com</a> for review/import.  </p>
+
+<p>We also support the Etsy Export file format LINK HERE.</p>
+
+<p><em>[Future]</em>
+We are working on Google Product Feed and Amazon Product feed imports.</p>
+
+<h2>
+<a id="inventory" class="anchor" href="#inventory" aria-hidden="true"><span class="octicon octicon-link"></span></a>Inventory</h2>
+
+<p><em>[API]</em>
 inventory report in json format:
-curl --user email:password https://vendors.tanga.com/api/vendors/<id>/inventory_report
+curl --user email:password <a href="https://vendors.tanga.com/api/vendors/">https://vendors.tanga.com/api/vendors/</a>/inventory_report</p>
 
-Currently we do not support inventory updating in the API.
+<p>Currently we do not support inventory updating in the API.</p>
 
-*[Future]*
-We will support REST based inventory updates.
+<p><em>[Future]</em>
+We will support REST based inventory updates.</p>
 
+<h2>
+<a id="upload-tracking" class="anchor" href="#upload-tracking" aria-hidden="true"><span class="octicon octicon-link"></span></a>Upload Tracking</h2>
 
-## Upload Tracking
-
-*[API]*
+<p><em>[API]</em>
 upload single tracking number:
-`curl -X POST -d package_id=12234 -d tracking_number=1Zasdf --user email:password https://vendors.tanga.com/api/vendors/<id>/set_tracking`
+<code>curl -X POST -d package_id=12234 -d tracking_number=1Zasdf --user email:password https://vendors.tanga.com/api/vendors/&lt;id&gt;/set_tracking</code></p>
 
-upload multiple tracking numbers via csv file:
-`curl -X POST --user email:password -d "csv=`cat /tmp/t.csv`" https://vendors.tanga.com/api/vendors/<id>/set_tracking`
-The CSV file should be in the same format as the one you upload to https://vendors.tanga.com.
+<p>upload multiple tracking numbers via csv file:
+<code>curl -X POST --user email:password -d "csv=</code>cat /tmp/t.csv<code>" https://vendors.tanga.com/api/vendors/&lt;id&gt;/set_tracking</code>
+The CSV file should be in the same format as the one you upload to <a href="https://vendors.tanga.com">https://vendors.tanga.com</a>.</p>
 
-
-*[Manual CSV]*
+<p><em>[Manual CSV]</em>
 You can manually upload tracking via CSV format LINK HERE in your vendor portal: 
-`https://vendors.tanga.com/drop_shippers/<id>/purchase_orders/orders/csv`
+<code>https://vendors.tanga.com/drop_shippers/&lt;id&gt;/purchase_orders/orders/csv</code></p>
 
+<h2>
+<a id="orders" class="anchor" href="#orders" aria-hidden="true"><span class="octicon octicon-link"></span></a>Orders</h2>
 
-## Orders
-*[API]*
+<p><em>[API]</em>
 fetch unshipped orders in csv format:
-curl --user email:password https://vendors.tanga.com/api/vendors/<id>/unshipped_items.csv
-This will return the data in csv format you define.
+curl --user email:password <a href="https://vendors.tanga.com/api/vendors/">https://vendors.tanga.com/api/vendors/</a>/unshipped_items.csv
+This will return the data in csv format you define.</p>
 
-fetch unshipped orders in json format:
-curl --user email:password  https://vendors.tanga.com/api/vendors/<id>/unshipped_items
+<p>fetch unshipped orders in json format:
+curl --user email:password  <a href="https://vendors.tanga.com/api/vendors/">https://vendors.tanga.com/api/vendors/</a>/unshipped_items</p>
 
-
-*[Manual CSV]*
+<p><em>[Manual CSV]</em>
 You can manually download orders via CSV format in your vendor portal: 
-`https://vendors.tanga.com/drop_shippers/<id>/purchase_orders`
+<code>https://vendors.tanga.com/drop_shippers/&lt;id&gt;/purchase_orders</code></p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
