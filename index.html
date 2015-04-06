@@ -68,11 +68,15 @@
   inventory report in json format:<br/>
   <code>curl --user email:password https://vendors.tanga.com/api/vendors/inventory_report</code></p>
 
-  <p>Currently we do not support inventory updating in the API.</p>
+  <p>
+    update single product inventory:<br/>
+    <code>curl --data "vendor_sku_code=&lt;sku code&gt;&in_stock=&lt;in stock count&gt;" https://vendors-dev.tanga.com/api/v1/drop_shippers/&lt;id&gt;/inventory</code>
+  </p>
 
-
-  <p><em>[Future]<br/>
-  We will support REST based inventory updates.</p>
+  <p>
+    update bulk inventory:<br/>
+    <code>curl -F "file=@&lt;path to local inventory csv&gt;" https://vendors.tanga.com/api/v1/drop_shippers/&lt;id&gt;/inventory/file</code>
+  </p>
 
 <h2>
   <a id="upload-tracking" class="anchor" href="#upload-tracking" aria-hidden="true"><span class="octicon octicon-link"></span></a>Upload Tracking
