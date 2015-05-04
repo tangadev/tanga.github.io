@@ -106,6 +106,11 @@ This will return the data in csv format you define.</p>
   <p>fetch unshipped orders in json format:<br/>
   <code>curl --user email:password  https://vendors.tanga.com/api/vendors/unshipped_items</code></p>
 
+  <p>Fetching unshipped items support <code>start_at</code> and <code>end_at</code> iso-8601 parameters 
+     for fetching a range of orders.
+     <code>?start_at=2015-05-03T15:39:03+00:00&end_at=2015-05-04T15:39:03+00:00</code>
+   </p>
+
   <p><em>[Manual CSV]</em><br/>
   You can manually download orders via CSV format in your vendor portal: <br/>
   <code>https://vendors.tanga.com/drop_shippers/&lt;id&gt;/purchase_orders</code></p>
